@@ -18,6 +18,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'toastr_rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
