@@ -9,7 +9,8 @@ Things you may want to cover:
 
 
 * Gems used
-bootstrap-sass - easily create a navbar, buttons and more.
-jquery-rails
-simple_form - creating forms easily
-devise - user authetication
+- bootstrap-sass  easily create a navbar, buttons and more.
+- jquery-rails
+- simple_form  creating forms easily
+- devise  user authetication
+- toastr 
