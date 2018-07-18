@@ -14,5 +14,6 @@ Things you may want to cover:
 - simple_form - creating forms easily
 - devise  - user authetication
 - toastr
+- country select
 
 Incorporated mail gun into a mail notification system

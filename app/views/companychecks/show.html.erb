@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Iscompany:</strong>
+  <%= @companycheck.iscompany %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @companycheck.user %>
+</p>
+
+<%= link_to 'Edit', edit_companycheck_path(@companycheck) %> |
+<%= link_to 'Back', companychecks_path %>
