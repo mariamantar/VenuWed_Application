@@ -1,2 +1,5 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% if current_user.is_company %>
+  <%= render 'companies/form', company: @company%>
+<% else %>
+  <%= render 'customers/form', customer: @customer%>
+<% end %>

@@ -19,6 +19,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'toastr_rails'
+gem 'country_select'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

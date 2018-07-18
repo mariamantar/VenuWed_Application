@@ -1,0 +1,2 @@
+module CompanychecksHelper
+end
