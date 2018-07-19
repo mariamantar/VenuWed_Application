@@ -17,19 +17,91 @@
  @import "bootstrap";
  @import "toastr";
 
-.avatar_small{
+ body {
+   color: #565a5c;
+   background-color: #f8f8f8;
+   font-family: "Varela round", "helvetica neue", "helvetica", "arial", sans-serif;
+ }
+
+ a {
+   color: #00a699;
+ }
+
+ .container {
+   width: 80%;
+ }
+
+ // navbar
+
+ .navbar-default {
+   background-color: #ffffff;
+ }
+
+ .navbar-default .navbar-brand{
+   color: #ff5a5f;
+   font-size: 2em;
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+ }
+
+// buttons
+
+.btn-primary.btn {
+ border: 1px solid #ff5a5f;
+ border-radius: 5px;
+ width: 100%;
+ font-weight: bold;
+ background-color: #ff5a5f;
+ color: #fff;
+ padding: 10px 25px 10px 25px;
+}
+
+.btn-primary.btn:hover, .btn-primary.btn:focus {
+ border-color: #ff7e82;
+ border-bottom-color: #fa0008;
+ background-color: #ff7e82;
+ outline:none;
+}
+
+.btn-primary.btn:active {
+ border-color: #e00007;
+ background-color: #e00007;
+ outline:none;
+}
+
+.btn-default.btn {
+ width: 100%;
+ border-radius: 2px;
+ padding: 10px 0;
+ margin-top: 10px;
+}
+
+.panel-default .panel-heading {
+ color: #565a5c;
+ background-color: #edefed;
+ font-size: 18px;
+ font-weight: 400
+}
+
+
+
+
+
+ // avatar
+
+.avatar-small{
   width: 28px;
 }
 
 
-.avatar_meidum{
+.avatar-meidum{
   width:48px;
 }
 
-.avatar_large{
+.avatar-large{
   width: 68px;
 }
 
-.avatar_full{
+.avatar-full{
   width: 100%
 }

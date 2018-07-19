@@ -1,31 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @customer.first_name %>
-</p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="center">
+<!-- image goes here -->
+    </div>
+    <div class="panel panel-default">
+<div class="panel-heading"><%= @customer.first_name %>   <%= @customer.last_name %> </div>
+<div class="panel-body">
+  Location:   <%= @customer.location %> <br>
+  Phone Number:  <%= @customer.phone %> <br>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
-</p>
+  <div class="col-md-9">
+    <h2>Venues Booked</h2>
+    <div class="description row-space-3">
 
+    </div>
+  </div>
+</div>
+
+
+<!--
 <p>
   <strong>Image:</strong>
   <%= @customer.image %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @customer.location %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @customer.phone %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @customer.user %>
-</p>
+</p> -->

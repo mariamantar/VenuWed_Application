@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :venue_listings
   resources :companychecks, only: [:show]
   resources :companies
   resources :customers

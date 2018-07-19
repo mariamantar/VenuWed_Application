@@ -1,6 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="center">
+<!-- image goes here -->
+    </div>
+    <div class="panel panel-default">
+<div class="panel-heading"><%= @company.username %> </div>
+<div class="panel-body">
+  Website: <%= @company.website %> <br>
+  Phone Number: <%= @company.phone %> <br>
+  Address: <%= @company.street %>
+  <%= @company.city %>
+    <%= @company.state %>
+    <%= @company.country %>
+    </div>
+  </div>
+</div>
+
+  <div class="col-md-9">
+    <h2>Venues Listed</h2>
+    <div class="description row-space-3">
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <p>
   <strong>Username:</strong>
   <%= @company.username %>
 </p>
@@ -38,4 +66,4 @@
 <p>
   <strong>User:</strong>
   <%= @company.user %>
-</p>
+</p> -->

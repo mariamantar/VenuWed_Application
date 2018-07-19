@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">VenuWed</a>
+      <a class="navbar-brand" href="http://localhost:3000">VenuWed</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,10 +16,8 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if (!user_signed_in?)%>
-          <li>
-            <%= link_to "Login", new_user_session_path %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-          </li> 
+          <li> <%= link_to "Login", new_user_session_path %> </li>
+        <li> <%= link_to "Sign Up", new_user_registration_path %> </li>
           <% elsif (user_signed_in?) %>
               <% if current_user.is_company %>
             <li class="dropdown">
@@ -29,7 +27,7 @@
                     <a href="#">List new venue</a>
                   </li>
                   <li>
-                    <a href="#">View Profile</a>
+                    <a href="  ">View Profile</a>
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
@@ -60,6 +58,7 @@
                     </li>
                   </ul>
                 </li>
+
               <% end %>
               <% end %>
             </ul>
