@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,6 +29,9 @@
                     <%= link_to 'List new venue', new_venue_listing_path %>
                   </li>
                   <li>
+                    <%= link_to 'My Venues', new_venue_listing_path %>
+                  </li>
+                  <li>
                       <%= link_to 'View Profile', companies_path %>
                   </li>
                   <li role="separator" class="divider"></li>
@@ -41,8 +46,10 @@
             <% else %>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <%= image_tag avatar_url(current_user), class: "image-circle avatar-small" %>&nbsp;
+                  <!-- <%= image_tag avatar_url(current_user), class: "image-circle avatar-small" %>&nbsp; -->
+                  <i class="far fa-user-circle"></i>
                   <ul class="dropdown-menu">
+
                     <li>
                       <a href="#">Your guest list</a>
                     </li>

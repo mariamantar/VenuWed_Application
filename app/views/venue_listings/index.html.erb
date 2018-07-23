@@ -1,43 +1,32 @@
 
-
-<!-- <p id="notice"><%= notice %></p>
-
-<h1>Venue Listings</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Venue name</th>
-      <th>Description</th>
-      <th>Attendees</th>
-      <th>Location</th>
-      <th>Price</th>
-      <th>Hours</th>
-      <th>Image</th>
-      <th>Company</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @venue_listings.each do |venue_listing| %>
-      <tr>
-        <td><%= venue_listing.venue_name %></td>
-        <td><%= venue_listing.description %></td>
-        <td><%= venue_listing.attendees %></td>
-        <td><%= venue_listing.location %></td>
-        <td><%= venue_listing.price %></td>
-        <td><%= venue_listing.hours %></td>
-        <td><%= venue_listing.image %></td>
-        <td><%= venue_listing.company %></td>
-        <td><%= link_to 'Show', venue_listing %></td>
-        <td><%= link_to 'Edit', edit_venue_listing_path(venue_listing) %></td>
-        <td><%= link_to 'Destroy', venue_listing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Venue Listing', new_venue_listing_path %> -->
+  <div class="row">
+  	<div class="col-md-3">
+  		<ul class="sidebar-list">
+        <li class="sidebar-item"> <%= link_to "Your Venues", venue_listings_path , class: "sidebar-link" %> </li>
+  		</ul>
+  	</div>
+  	<div class="col-md-9">
+  		<div class="panel panel-default">
+  			<div class="panel-heading">
+  				Listings
+  			</div>
+  			<div class="panel-body">
+  				  <% @venue_listings.each do |venue_listing| %>
+  					<div class="row">
+  						<div class="col-md-2">
+                <%=  image_tag(venue_listing.image_url) %>
+  						</div>
+  						<div class="col-md-7">
+                 <%= venue_listing.venue_name %>
+  						</div>
+  						<div class="col-md-3 right">
+  							<%= link_to "Edit Venue", edit_venue_listing_path(venue_listing), class: "btn btn-primary" %>
+                <%= link_to 'Delete', venue_listing_path(venue_listing), method: :delete %>
+  						</div>
+  					</div>
+  					<hr>
+  				<% end %>
+  			</div>
+  		</div>
+  	</div>
+  </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_23_014106) do
+ActiveRecord::Schema.define(version: 2018_07_23_071253) do
 
   create_table "companies", force: :cascade do |t|
     t.string "username"
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 2018_07_23_014106) do
     t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["company_id"], name: "index_venue_listings_on_company_id"
   end
 

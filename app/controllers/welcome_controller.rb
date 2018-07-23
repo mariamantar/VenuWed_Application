@@ -1,4 +1,7 @@
 class WelcomeController < ApplicationController
   def page
-  end
+    @venue_listings = VenueListing.all
+  
+end
+
 end
