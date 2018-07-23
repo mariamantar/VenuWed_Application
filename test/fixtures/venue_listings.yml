@@ -1,15 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  image: MyString
+  venue_name: MyString
   description: MyText
-  cost: 1.5
-  date: 1.5
+  attendees: 1
+  location: MyString
+  price: 1.5
+  hours: 1.5
+  image: MyString
   company: one
 
 two:
-  image: MyString
+  venue_name: MyString
   description: MyText
-  cost: 1.5
-  date: 1.5
+  attendees: 1
+  location: MyString
+  price: 1.5
+  hours: 1.5
+  image: MyString
   company: two

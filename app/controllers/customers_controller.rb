@@ -25,7 +25,8 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(customer_params)
-
+    #we have assigned the customer user id as the current user id to allow us to remove the f.assocation in the form since we are saying the user that the customer signed up as is the current user
+    @customer.user_id = current_user.id
     respond_to do |format|
       if @customer.save
         format.html { redirect_to @customer, notice: 'Customer was successfully created.' }

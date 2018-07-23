@@ -25,10 +25,10 @@ class VenueListingsController < ApplicationController
   # POST /venue_listings.json
   def create
     @venue_listing = VenueListing.new(venue_listing_params)
-
+   @venue_listing.company_id = current_user.id
     respond_to do |format|
       if @venue_listing.save
-        format.html { redirect_to @venue_listing, notice: 'Venue listing was successfully created.' }
+        format.html { redirect_to venue_listing_path(@venue_listing), notice: 'successfully created.' }
         format.json { render :show, status: :created, location: @venue_listing }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class VenueListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def venue_listing_params
-      params.require(:venue_listing).permit(:image, :description, :cost, :date, :company_id)
+      params.require(:venue_listing).permit(:venue_name, :description, :attendees, :location, :price, :hours, :image, :company_id)
     end
 end

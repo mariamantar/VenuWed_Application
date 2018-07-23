@@ -26,7 +26,8 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = Company.new(company_params)
-
+    #we have assigned the customer user id as the current user id to allow us to remove the f.assocation in the form since we are saying the user that the customer signed up as is the current user
+    @company.user_id = current_user.id
     respond_to do |format|
       if @company.save
         format.html { redirect_to @company, notice: 'Company was successfully created.' }

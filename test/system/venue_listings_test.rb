@@ -14,11 +14,14 @@ class VenueListingsTest < ApplicationSystemTestCase
     visit venue_listings_url
     click_on "New Venue Listing"
 
+    fill_in "Attendees", with: @venue_listing.attendees
     fill_in "Company", with: @venue_listing.company_id
-    fill_in "Cost", with: @venue_listing.cost
-    fill_in "Date", with: @venue_listing.date
     fill_in "Description", with: @venue_listing.description
+    fill_in "Hours", with: @venue_listing.hours
     fill_in "Image", with: @venue_listing.image
+    fill_in "Location", with: @venue_listing.location
+    fill_in "Price", with: @venue_listing.price
+    fill_in "Venue Name", with: @venue_listing.venue_name
     click_on "Create Venue listing"
 
     assert_text "Venue listing was successfully created"
@@ -29,11 +32,14 @@ class VenueListingsTest < ApplicationSystemTestCase
     visit venue_listings_url
     click_on "Edit", match: :first
 
+    fill_in "Attendees", with: @venue_listing.attendees
     fill_in "Company", with: @venue_listing.company_id
-    fill_in "Cost", with: @venue_listing.cost
-    fill_in "Date", with: @venue_listing.date
     fill_in "Description", with: @venue_listing.description
+    fill_in "Hours", with: @venue_listing.hours
     fill_in "Image", with: @venue_listing.image
+    fill_in "Location", with: @venue_listing.location
+    fill_in "Price", with: @venue_listing.price
+    fill_in "Venue Name", with: @venue_listing.venue_name
     click_on "Update Venue listing"
 
     assert_text "Venue listing was successfully updated"

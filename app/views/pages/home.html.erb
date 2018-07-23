@@ -1,13 +1,8 @@
-<% if((current_user.company) || (current_user.customer)) %>
-       <%= render :controller => 'pages', :action => 'welcome' %>
-<% else %>
-
+<!-- if you have signed up and for the first time based on the is_company checkbox selected or not you will rendered a customer or a company form -->
   <% if current_user.is_company %>
     <%= render 'companies/form', company: @company%>
   <% else %>
     <%= render 'customers/form', customer: @customer%>
   <% end %>
 <% end %>
-
-
   <!-- if user has selected to be a company while signing up fetch company form else customer form -->
