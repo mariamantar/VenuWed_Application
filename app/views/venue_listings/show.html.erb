@@ -1,45 +1,72 @@
+<div class="row">
+			<div class="col-md-12">
+			 <!-- image goes here -->
+       <%= image_tag @venue_listing.image_url %>
+			</div>
+		</div>
+  <br>
 
 
-<!-- <p id="notice"><%= notice %></p>
+  <!-- venue title -->
 
-<p>
-  <strong>Venue name:</strong>
-  <%= @venue_listing.venue_name %>
-</p>
+  <div class="row">
 
-<p>
-  <strong>Description:</strong>
-  <%= @venue_listing.description %>
-</p>
+  		<div class="col-md-8">
 
-<p>
-  <strong>Attendees:</strong>
-  <%= @venue_listing.attendees %>
-</p>
+          <div class="row">
+             <div class="col-md-8">
+                <h1> <%= @venue_listing.venue_name %> </h1>
+                <%= @venue_listing.location %>
+          </div>
+          <div class="col-md-4 text-center">
+           <!-- avatar url goes here --> <br> <br>
+           <%= @venue_listing.company.username %>
+       </div>
+        </div>
+        <hr>
 
-<p>
-  <strong>Location:</strong>
-  <%= @venue_listing.location %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @venue_listing.price %>
-</p>
+<!-- about the venue -->
+      <div class="row">
+        <div class="col-md-12">
+          <h3>About this Venuue</h3>
+          <p> <%= @venue_listing.description %> </p>
+      </div>
+    </div>
+    <hr>
 
-<p>
-  <strong>Hours:</strong>
-  <%= @venue_listing.hours %>
-</p>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Price & attendees</h4>
+        <p> <%= @venue_listing.hours %>  hours for $ <%= @venue_listing.price %> </p>
+        <p>  <%= @venue_listing.attendees %> heads fit in this venue</p>
+    </div>
+    </div>
+    <hr>
 
-<p>
-  <strong>Image:</strong>
-  <%= @venue_listing.image %>
-</p>
 
-<p>
-  <strong>Company:</strong>
-  <%= @venue_listing.company %>
-</p>
+    <div class="row">
+      <div id="map" style="width: 100%; height: 400px">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+  		    <script>
+  		      function initialize() {
+  		        var mapCanvas = document.getElementById('map');
+  		        var mapOptions = {
+  		          center: new google.maps.LatLng(<%= @venue_listing.latitude %>, <%= @venue_listing.longitude %>),
+  		          zoom: 14,
+  		          mapTypeId: google.maps.MapTypeId.ROADMAP
+  		        }
+  		        var map = new google.maps.Map(mapCanvas, mapOptions);
+  		        var marker = new google.maps.Marker({
+  		        	position: new google.maps.LatLng(<%= @venue_listing.latitude %>, <%= @venue_listing.longitude %>),
+  		        	title: "AirAlien"
+  		        });
+  		        marker.setMap(map);
+  		      }
+  		      google.maps.event.addDomListener(window, 'load', initialize);
+  		    </script>
 
-<%= link_to 'Edit', edit_venue_listing_path(@venue_listing) %> | -->
+       </div>
+  </div>
+  <hr>
+      </div>
