@@ -24,10 +24,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="#">List new venue</a>
+                    <%= link_to 'List new venue', new_venue_listing_path %>
                   </li>
                   <li>
-                    <a href="  ">View Profile</a>
+                      <%= link_to 'View Profile', companies_path %>
                   </li>
                   <li role="separator" class="divider"></li>
                   <li>
@@ -41,7 +41,7 @@
             <% else %>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <%= image_tag avatar_url(current_user), class: "image-circle avatar_small" %>&nbsp;
+                  <%= image_tag avatar_url(current_user), class: "image-circle avatar-small" %>&nbsp;
                   <ul class="dropdown-menu">
                     <li>
                       <a href="#">Your guest list</a>

@@ -20,6 +20,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'toastr_rails'
 gem 'country_select'
+gem 'carrierwave', '~> 1.0'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -17,7 +17,7 @@ class VenueListingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create venue_listing" do
     assert_difference('VenueListing.count') do
-      post venue_listings_url, params: { venue_listing: { company_id: @venue_listing.company_id, cost: @venue_listing.cost, date: @venue_listing.date, description: @venue_listing.description, image: @venue_listing.image } }
+      post venue_listings_url, params: { venue_listing: { attendees: @venue_listing.attendees, company_id: @venue_listing.company_id, description: @venue_listing.description, hours: @venue_listing.hours, image: @venue_listing.image, location: @venue_listing.location, price: @venue_listing.price, venue_name: @venue_listing.venue_name } }
     end
 
     assert_redirected_to venue_listing_url(VenueListing.last)
@@ -34,7 +34,7 @@ class VenueListingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update venue_listing" do
-    patch venue_listing_url(@venue_listing), params: { venue_listing: { company_id: @venue_listing.company_id, cost: @venue_listing.cost, date: @venue_listing.date, description: @venue_listing.description, image: @venue_listing.image } }
+    patch venue_listing_url(@venue_listing), params: { venue_listing: { attendees: @venue_listing.attendees, company_id: @venue_listing.company_id, description: @venue_listing.description, hours: @venue_listing.hours, image: @venue_listing.image, location: @venue_listing.location, price: @venue_listing.price, venue_name: @venue_listing.venue_name } }
     assert_redirected_to venue_listing_url(@venue_listing)
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_19_064922) do
+ActiveRecord::Schema.define(version: 2018_07_23_014106) do
 
   create_table "companies", force: :cascade do |t|
     t.string "username"
@@ -66,10 +66,13 @@ ActiveRecord::Schema.define(version: 2018_07_19_064922) do
   end
 
   create_table "venue_listings", force: :cascade do |t|
-    t.string "image"
+    t.string "venue_name"
     t.text "description"
-    t.float "cost"
-    t.float "date"
+    t.integer "attendees"
+    t.string "location"
+    t.float "price"
+    t.float "hours"
+    t.string "image"
     t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
