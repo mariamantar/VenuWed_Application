@@ -5,7 +5,8 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-gem 'sqlite3'
+#sqlite 3 for developement
+gem 'sqlite3', group: [:development, :test]
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -13,6 +14,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'

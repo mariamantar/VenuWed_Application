@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'checkout/new'
   resources :venue_listings
   resources :venue_listings, except: [:edit] do
   end
