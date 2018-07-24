@@ -4,6 +4,7 @@
   <div class="col-md-3">
     <div class="center">
 <!-- image goes here -->
+
     </div>
     <div class="panel panel-default">
 <div class="panel-heading"><%= @company.username %> </div>
@@ -18,10 +19,23 @@
   </div>
 </div>
 
-  <div class="col-md-9">
-    <h2>Venues Listed</h2>
-    <div class="description row-space-3">
 
-    </div>
-  </div>
+
+
+    <h2>Venues Listed (<%= @venue_listings.length %> )</h2><br>
+<div class="row">
+  <% @venue_listings.each do |venue_listing| %>
+       <div class="col-md-4">
+         <div class="panel panel-default">
+           <div class="panel-heading preview">
+            <%=  image_tag(venue_listing.image_url, :size => "300x300") %>
+             </div>
+             <div class="panel-body">
+               <%= link_to venue_listing.venue_name %>
+             </div>
+         </div>
+       </div>
+  <% end %>
+
+</div>
 </div>

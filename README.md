@@ -43,6 +43,11 @@ Another issue couples has experienced was the guest list, so i designed a system
 A lot of time was spent putting together the entity relationship diagram with a lot of changes being made. The tool used was dbdesigner.net
 
 
+## DESIGN DECISIONS
+
+A lot of the design inspiration for Venuwed came for airbnb since the business model was very similar and that was actually where i took inspiration form with the color of the logo and layout of the venues. I decided to add a similar looking search bar on the homepage that allows customers to search for the desired venue location and also filter through the other venues. A big difference between airbnb and and venuwed is that customers are unable to upload venues, you have to be a company to upload a venue. This is because the aim for venuwed was to be able to allow couples to connect to real companies and venues instantly instead of allowing anyone to upload a venue. One difficulty that i experienced was getting the company check box to work, in order for it to work it had to be stored in the database so that the company form would render once they signed up. I used bootstrap for the navigation bar and created a dropdown menu for easy navigation. At first i thought using gravatar would be a good option for the dropdown avatar but i experienced some issues getting an avatar to render each time the user signs up so i switched up for a glyphicon instead.
+
+
 ![alt text](https://i.imgur.com/U7XeyZa.png)
 
 ## Project plan estimation
@@ -74,10 +79,6 @@ User should be able to register as a customer or a venue via company check box, 
 - Live chat system integrated
 - Calendar connected to inspection button
 - Review system that can add pictures
-
-
-
-
 
 
 
