@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'checkout/new'
   resources :venue_listings
   resources :venue_listings, except: [:edit] do
@@ -7,6 +6,7 @@ Rails.application.routes.draw do
   resources :companychecks, only: [:show]
   resources :companies
   resources :customers
+  resources :charges
   get 'pages/home'
   devise_for :users
   root 'welcome#page'

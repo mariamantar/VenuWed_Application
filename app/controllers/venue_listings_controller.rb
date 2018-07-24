@@ -10,7 +10,7 @@ class VenueListingsController < ApplicationController
   # GET /venue_listings/1
   # GET /venue_listings/1.json
   def show
-    
+
   end
 
   # GET /venue_listings/new
@@ -26,7 +26,7 @@ class VenueListingsController < ApplicationController
   # POST /venue_listings.json
   def create
     @venue_listing = VenueListing.new(venue_listing_params)
-   @venue_listing.company_id = current_user.id
+   @venue_listing.company_id = current_user.company.id
     respond_to do |format|
       if @venue_listing.save
         format.html { redirect_to venue_listing_path(@venue_listing), notice: 'successfully created.' }

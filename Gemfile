@@ -14,8 +14,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-gem 'pg', group: :production
-gem 'rails_12factor', group: :production
+gem 'pg'
+gem 'rails_12factor'
 
 gem "figaro"
 
@@ -29,6 +29,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
 gem "mini_magick"
 gem 'geocoder'
+gem 'stripe'
 
 
 
@@ -57,5 +58,9 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
