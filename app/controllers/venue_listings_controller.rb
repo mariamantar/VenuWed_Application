@@ -3,6 +3,8 @@ class VenueListingsController < ApplicationController
 
   # GET /venue_listings
   # GET /venue_listings.json
+
+
   def index
     @venue_listings = VenueListing.all
   end
@@ -12,6 +14,8 @@ class VenueListingsController < ApplicationController
   def show
 
   end
+
+
 
   # GET /venue_listings/new
   def new
