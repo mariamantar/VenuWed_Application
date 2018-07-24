@@ -2,8 +2,9 @@
 
 VenuWed is a hassle free wedding service that allows couples to easily find the best rated wedding venues within their budget and book an inspection instantly; saving time and money. Simply type in your desired location and all the nearby wedding venues will appear with ratings from real customers and upfront costing. After that you have the option to either book an inspection date and pay the venue directly online.
 
-## view on heroku
+## view on heroku/trello
  https://venu-wed.herokuapp.com/
+ https://trello.com/b/zJrs1sOn/venuwed-app
 
 ## Installation
 $ git clone https://github.com/mariamantar/VenuWed_App.git
