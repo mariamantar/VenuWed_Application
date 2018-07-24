@@ -1,0 +1,9 @@
+development:
+  cloud_name: "maryantar"
+  api_key: "312653339286531"
+  api_secret: "PyTIYD2Ej06K8CIcTzz1T7vLRSE"
+
+production:
+  cloud_name: "maryantar"
+  api_key: "312653339286531"
+  api_secret: "PyTIYD2Ej06K8CIcTzz1T7vLRSE"

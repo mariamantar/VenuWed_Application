@@ -24,10 +24,12 @@ gem 'devise'
 gem 'toastr_rails'
 gem 'country_select'
 gem 'carrierwave', '~> 1.0'
+gem 'cloudinary'
 gem 'fog-aws'
 gem "mini_magick"
 gem 'geocoder'
 gem 'stripe'
+
 
 
 
