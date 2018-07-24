@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
+gem "figaro"
+
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'simple_form'
