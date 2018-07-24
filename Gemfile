@@ -29,6 +29,7 @@ gem 'fog-aws'
 gem "mini_magick"
 gem 'geocoder'
 gem 'stripe'
+gem 'pg_search'
 
 
 

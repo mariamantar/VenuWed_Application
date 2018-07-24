@@ -73,8 +73,26 @@
       </div>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-			<!-- book inspection button -->
-
-<a href="http://localhost:3000" class="btn primary btn-info" role="button">Book Inspection</a>
+<%= form_tag charges_path do %>
+<article>
+  <% if flash[:error].present? %>
+  <div id="error_explanation">
+    <p><%= flash[:error] %></p>
+  </div>
+  <% end %>
+  <label class="amount">
+  <span>Amount: $<%= @venue_listing.price %></span>
+  </label>
+</article>
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-description="A month's subscription"
+  data-amount="<%= @venue_listing.price %>"
+  data-locale="auto"></script>
+<% end %>

@@ -1,4 +1,5 @@
 class VenueListing < ApplicationRecord
+  
   belongs_to :company
 
   geocoded_by :location
