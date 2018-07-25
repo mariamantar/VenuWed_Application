@@ -1,7 +1,9 @@
 class VenueListing < ApplicationRecord
+include PgSearch
+pg_search_scope :search, against: [:venue_name, :location]
+
 
   belongs_to :company
-
   geocoded_by :location
 after_validation :geocode, if :location_changed?
 

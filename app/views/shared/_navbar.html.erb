@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://localhost:3000">VenuWed</a>
+      <a class="navbar-brand" href=" <%= root_path %>">VenuWed</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,7 +50,7 @@
                   <ul class="dropdown-menu">
                     <!-- links to the customer profile  -->
                     <li>
-                    <%= link_to 'View Profile', customer_path(current_user.id) %>
+                    <%= link_to 'View Profile', customer_path(current_user.customer.id) %>
                     </li>
                     <li>
                       <!-- This will show all the venues that the customer has previously booked through stripe payment -->
